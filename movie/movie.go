@@ -114,7 +114,7 @@ func GetMovie(start int) []Movie {
 
 func GetZhTitle(title string) error {
 	for _, v := range title {
-		if !unicode.Is(unicode.Han, v) && !unicode.IsPunct(v) && !unicode.IsSpace(v) {
+		if !unicode.Is(unicode.Han, v) && !unicode.IsPunct(v) && !unicode.IsSpace(v) && !unicode.IsNumber(v) {
 			return errors.New("title只能是中文")
 		}
 	}
