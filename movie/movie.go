@@ -23,7 +23,7 @@ type Movie struct {
 const (
 	Header = `# 豆瓣 TOP Movie 250
 
-Douban top movies.
+Douban top movies from %d to %d.
 
 | Id | Title | Rate | Info | Quote |
 | --- | ----- | ---- | ---- | ----- |
@@ -121,6 +121,8 @@ func GetZhTitle(title string) error {
 	return nil
 }
 
+var ids []int64
+
 func WriteToFile(movie []Movie) error {
 	// change path here
 	file, err := os.OpenFile("README.md", os.O_RDWR|os.O_TRUNC, 0666)
@@ -130,7 +132,13 @@ func WriteToFile(movie []Movie) error {
 	}
 	defer file.Close()
 
-	_, err = file.WriteString(Header)
+	for _, movie := range movie {
+		ids = append(ids, movie.Id)
+	}
+	IdStart := ids[0]
+	IdEnd := ids[len(ids)-1]
+
+	_, err = file.WriteString(fmt.Sprintf(Header, IdStart, IdEnd))
 	if err != nil {
 		return err
 	}
