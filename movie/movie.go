@@ -21,7 +21,7 @@ type Movie struct {
 }
 
 const (
-	Header = `#TOP Movie 250
+	Header = `#豆瓣 TOP Movie 250
 
 Douban top movies.
 
