@@ -122,9 +122,9 @@ func GetZhTitle(title string) error {
 }
 
 func WriteToFile(movie []Movie) error {
-
-	//file, err := os.OpenFile("README.md", os.O_RDWR|os.O_TRUNC, 0666)
-	file, err := os.OpenFile("C:\\Users\\Murphy\\Desktop\\Movie.md", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0666)
+	// change path here
+	file, err := os.OpenFile("README.md", os.O_RDWR|os.O_TRUNC, 0666)
+	//file, err := os.OpenFile("C:\\Users\\Murphy\\Desktop\\Movie.md", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0666)
 	if err != nil {
 		return err
 	}

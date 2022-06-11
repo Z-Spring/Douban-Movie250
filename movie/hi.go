@@ -2,6 +2,7 @@ package movie
 
 import (
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -9,7 +10,7 @@ import (
 
 func GetMovieBody(start int) []byte {
 	//url := "https://movie.douban.com/top250"
-	url := ChoosePage(start)
+	url := ChooseStartId(start)
 	method := "GET"
 
 	client := &http.Client{}
@@ -26,7 +27,12 @@ func GetMovieBody(start int) []byte {
 		log.Println(err)
 
 	}
-	defer res.Body.Close()
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		if err != nil {
+			log.Println(err)
+		}
+	}(res.Body)
 
 	body, err := ioutil.ReadAll(res.Body)
 	if err != nil {
@@ -36,7 +42,7 @@ func GetMovieBody(start int) []byte {
 	return body
 }
 
-func ChoosePage(start int) string {
+func ChooseStartId(start int) string {
 	if start >= 0 && start <= 249 {
 		url := "https://movie.douban.com/top250?start=%d&filter="
 		url2 := fmt.Sprintf(url, start)
