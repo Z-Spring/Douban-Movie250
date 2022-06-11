@@ -21,14 +21,14 @@ type Movie struct {
 }
 
 const (
-	Header = `#豆瓣 TOP Movie 250
+	Header = `# 豆瓣 TOP Movie 250
 
 Douban top movies.
 
 | Id | Title | Rate | Info | Quote |
 | --- | ----- | ---- | ---- | ----- |
 `
-	Footer = "\nLast update Time: %v"
+	Footer = "\n*Last update Time: %v*"
 )
 
 func GetMovie(start int) []Movie {
