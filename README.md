@@ -1,5 +1,7 @@
 # 豆瓣 TOP Movie 250
 
+use go native package html to achieve this.
+
 Douban top movies from 1 to 25.
 
 | Id | Title | Rate | Info | Quote |
@@ -30,4 +32,4 @@ Douban top movies from 1 to 25.
 | 24 | 触不可及 | 9.3/10.0 | 2011 / 法国 / 剧情 喜剧 | 满满温情的高雅喜剧。 |
 | 25 | 怦然心动 | 9.1/10.0 | 2010 / 美国 / 剧情 喜剧 爱情 | 真正的幸福是来自内心深处。 |
 
-*Last update Time: 2022-06-11 23:38:48*
+*Last update Time: 2022-06-11 23:57:00*

@@ -23,6 +23,8 @@ type Movie struct {
 const (
 	Header = `# 豆瓣 TOP Movie 250
 
+use go native package html to achieve this.
+
 Douban top movies from %d to %d.
 
 | Id | Title | Rate | Info | Quote |
@@ -37,6 +39,7 @@ func GetMovie(start int) []Movie {
 	if err != nil {
 		panic(err)
 	}
+
 	var f func(node *html.Node)
 	var (
 		movie  []Movie
@@ -125,7 +128,8 @@ var ids []int64
 
 func WriteToFile(movie []Movie) error {
 	// change path here
-	file, err := os.OpenFile("README.md", os.O_RDWR|os.O_TRUNC, 0666)
+	file, err := os.OpenFile("README.md", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0666)
+	//file, err := os.OpenFile("README.md", os.O_RDWR|os.O_TRUNC, 0666)
 	//file, err := os.OpenFile("C:\\Users\\Murphy\\Desktop\\Movie.md", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0666)
 	if err != nil {
 		return err
