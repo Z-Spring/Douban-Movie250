@@ -23,3 +23,12 @@ jobs:
       
     - name: Run
       run: go run main.go
+
+    - name: Update movie list
+      run: |-
+        git diff
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action"
+        git add -A
+        git commit -m "ci: update list (automatically)" || exit 0
+        git push
