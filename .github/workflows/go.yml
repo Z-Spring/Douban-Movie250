@@ -22,8 +22,7 @@ jobs:
       run: go version
       
     - name: Run
-      run: | 
-        go run main.go
+      run: go run main.go
 
     - name: Update movie list
       run: |-
