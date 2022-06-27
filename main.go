@@ -10,7 +10,7 @@ func init() {
 }
 
 func main() {
-	movies := movie.GetMovie(10)
+	movies := movie.GetMovie(0)
 	err := movie.WriteToFile(movies)
 	if err != nil {
 		log.Println(err)

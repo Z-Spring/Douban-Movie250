@@ -1,6 +1,6 @@
 # 豆瓣 TOP Movie 250
 
-  | use go native package html to achieve this.
+> use go native package html to achieve this.
 
 Douban top movies from 11 to 35.
 
