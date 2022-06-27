@@ -20,6 +20,9 @@ jobs:
 
     - name: Go Version
       run: go version
+
+    - name: GO build
+      run: go build .
       
     - name: Run
-      run: go run main.go
+      run: ./awesomeProject3
