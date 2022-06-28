@@ -2,9 +2,6 @@
 
 > use go native package html to achieve this.
 
-🎁 you can also read [doubanTOP](https://github.com/Z-Spring/DoubanTOP) which achieves the same feature but use goquery.
-
-
 Douban top movies from 1 to 25.
 
 | Id | Title | Rate | Info | Quote |
@@ -35,4 +32,4 @@ Douban top movies from 1 to 25.
 | 24 | 触不可及 | 9.3/10.0 | 2011 / 法国 / 剧情 喜剧 | 满满温情的高雅喜剧。 |
 | 25 | 怦然心动 | 9.1/10.0 | 2010 / 美国 / 剧情 喜剧 爱情 | 真正的幸福是来自内心深处。 |
 
-*Last update Time: 2022-06-28 13:56:11*
+*Last update Time: 2022-06-27 10:39:47*
