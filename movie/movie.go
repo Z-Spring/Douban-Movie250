@@ -25,6 +25,9 @@ const (
 
 > use go native package html to achieve this.
 
+🎁 you can also read [DoubanTOP](https://github.com/Z-Spring/DoubanTOP) which achieves the same feature but use goquery.
+
+
 Douban top movies from %d to %d.
 
 | Id | Title | Rate | Info | Quote |
