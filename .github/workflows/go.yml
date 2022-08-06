@@ -29,8 +29,10 @@ jobs:
     - name: Update movie list
       run: |-
         git diff
-        git config user.email "action@github.com"
-        git config user.name "GitHub Action"
+#        git config user.email "action@github.com"
+        git config user.email "murphyqq1@gmail.com"
+#        git config user.name "GitHub Action"
+        git config user.name "Z-Spring"
         git add -A
         git commit -m "ci: update list (automatically)" || exit 0
         git push
